@@ -1,5 +1,5 @@
 # Youtube Performatic Player
-Seeking for creative ways to reduce page loading time, specifically for loading youtube videos, I found parts of codes throughout the internet and this is what I managed to put together to give the same experience as putting an youtube video on an iframe, but reducing the cost to download it's info.
+Seeking for creative ways to reduce page loading time, specifically for loading youtube videos, I found parts of codes throughout the internet and this is what I managed to put together to give the same experience as putting an youtube video on an iframe, but reducing the cost to almost 500% less than what would take for the browser to get information from youtube servers and render it to the calling page.
 
 # How it Works
  Gets all divs with "youtube" class and:
