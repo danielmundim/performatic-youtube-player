@@ -12,3 +12,5 @@ Seeking for creative ways to reduce page loading time, specifically for loading 
  - thumbnailquality: thumbnail quality (standard, medium, high, maximum)
 
  Atenttion for thumbnail-quality, be aware that not all youtube videos have thumbnails for all qualities available.
+
+Improvements are welcome! :)
