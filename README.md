@@ -1,5 +1,5 @@
 # Youtube Performatic Player
-This is a strategy that basically deceives the user into thinking it is a youtube player when it actually isn't, although you get basically the same behaviour, but reducint load time drastically. 
+This is a strategy that basically deceives the user into thinking it is a youtube player when it actually isn't, although you get basically the same behaviour, but reducing load time drastically. 
 
 ![Alt Text](https://github.com/danielmundim/performatic-youtube-player/blob/master/load-time.gif)
 
