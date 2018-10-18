@@ -12,20 +12,26 @@
 document.addEventListener("DOMContentLoaded", function(event) { 
     var youtube = document.querySelectorAll(".youtube");
 
+    // Iterates all divs found with class "youtube"
     for (var i = 0; i < youtube.length; i++) {
         var embed = getVideoId(youtube[i].dataset.embed);
-
         var quality = getQuality(youtube[i].dataset.thumbnailquality);
-        var source = "https://img.youtube.com/vi/" + embed + "/" + quality + ".jpg";
+        var source = getThumbnail(embed, quality);
 
+        // Appends image thumbnail on div
         var image = new Image();
         image.src = source;;
-        image.className += (youtube[i].dataset.thumbnailquality == "medium") ? "small" : "";
+        image.className += getImageClassName(youtube[i].dataset.thumbnailquality);
         image.addEventListener("load", function () {
             youtube[i].appendChild(image);
         }(i));
         
+        // Appends play button fake on div
+        var playbutton = document.createElement("div");
+        playbutton.className += 'play-button';
+        youtube[i].appendChild(playbutton);
 
+        // Adds event to load iframe with full video once user clicks on the div
         youtube[i].addEventListener("click", function (event) {
 
             event.preventDefault();
@@ -41,6 +47,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
         });
     }
 });
+
+function getThumbnail(embed, quality) {
+    return "https://img.youtube.com/vi/" + embed + "/" + quality + ".jpg";
+}
+
+function getImageClassName(tq) {
+    return (tq == "medium") ? "small" : "";
+}
 
 function getQuality(q) {
     var quality;

@@ -44,6 +44,7 @@
     border-color: transparent transparent transparent #fff
 }
 
+.youtube img,
 .youtube .play-button {
     cursor: pointer
 }
