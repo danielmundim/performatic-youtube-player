@@ -14,9 +14,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     // Iterates all divs found with class "youtube"
     for (var i = 0; i < youtube.length; i++) {
-        var embed = getVideoId(youtube[i].dataset.embed);
-        var quality = getQuality(youtube[i].dataset.thumbnailquality);
-        var source = getThumbnail(embed, quality);
+        var vid = getVideoId(youtube[i].dataset.embed);
+        var quality = youtube[i].dataset.thumbnailquality;
+        var source = getThumbnail(vid, quality);
 
         // Appends image thumbnail on div
         var image = new Image();
@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
             iframe.setAttribute("frameborder", "0");
             iframe.setAttribute("allowfullscreen", "");
-            iframe.setAttribute("src", "https://www.youtube.com/embed/" + getVideoId(this.dataset.embed) + "?rel=0&autoplay=1");
+            iframe.setAttribute("src", "https://www.youtube.com/embed/" + vid + "?rel=0&autoplay=1");
 
             this.innerHTML = "";
             this.appendChild(iframe);
@@ -54,30 +54,6 @@ function getThumbnail(embed, quality) {
 
 function getImageClassName(tq) {
     return (tq == "medium") ? "small" : "";
-}
-
-function getQuality(q) {
-    var quality;
-
-    switch (q) {
-        case 'standard':
-            quality = 'sddefault';
-            break;
-        case 'medium':
-            quality = 'mqdefault';
-            break;
-        case 'high':
-            quality = 'hqdefault';
-            break;
-        case 'maximum':
-            quality = 'maxresdefault';
-            break;
-        default:
-            quality = 'sddefault';
-            break;
-    };
-
-    return quality;
 }
 
 function getVideoId(url) {
