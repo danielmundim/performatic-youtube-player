@@ -13,7 +13,7 @@ This is a strategy that basically deceives the user into thinking it is a youtub
 
  div properties:
  - embed: youtube video URL 
- - thumbnailquality: thumbnail quality (standard, medium, high, maximum)
+ - thumbnailquality: (sddefault, mqdefault, hqdefault, maxresdefault)
  
  Sample usage is in index.html file
 
