@@ -29,7 +29,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
             iframe.setAttribute("frameborder", "0");
             iframe.setAttribute("allowfullscreen", "");
-            iframe.setAttribute("src", "https://www.youtube.com/embed/" + getVideoId(youtube[i].dataset.embed) + "?rel=0&autoplay=1");
+            iframe.setAttribute("src", "https://www.youtube.com/embed/" + getVideoId(this.dataset.embed) + "?rel=0&autoplay=1");
+            iframe.setAttribute("allow", "autoplay");
 
             this.innerHTML = "";
             this.appendChild(iframe);
